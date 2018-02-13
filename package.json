@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack && babel-node server.js",
     "dev": "webpack-dev-server --hot",
     "build": "webpack",
     "server": "webpack && babel-node server.js"
