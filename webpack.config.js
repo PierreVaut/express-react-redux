@@ -3,8 +3,6 @@
 
 const path = require('path');
 const merge = require('webpack-merge');
-const validate = require('webpack-validator');
-
 const parts = require('./webpack-loaders');
 
 const PATHS = {
@@ -25,11 +23,11 @@ const common = {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: ['react-hot-loader/webpack', 'babel-loader']
     }]
   },
 	resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
 };
 
@@ -59,4 +57,4 @@ switch(process.env.npm_lifecycle_event) {
 		);
 }
 
-module.exports = validate(config);
+module.exports = config;

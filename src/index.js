@@ -46,9 +46,11 @@ const routes = <Route component={Layout}>
 </Route>;
 
 // add provider as first component and connect the store to it
-ReactDOM.render(
+/*ReactDOM.render(
 	<Provider store={store}>
 		<Router history={hashHistory}>{routes}</Router>
 	</Provider>,
 	document.getElementById('app')
-);
+);*/
+
+ReactDOM.render(<h1>Hello worldzz !!!</h1>, document.getElementById('app'))
